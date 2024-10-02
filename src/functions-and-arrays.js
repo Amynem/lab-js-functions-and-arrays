@@ -58,7 +58,17 @@ sumNumbers()
 // Iteration 4 | Numbers Average
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(numbers2) {
+    if ( numbers2.length === 0 ) {
+        return 0;
+    }
+    let sum = 0;
+    for ( let i = 0; i < numbers2.length; i++ ) {
+        sum += numbers2[i];
+    }
+    const avarage = sum / numbers2.length;
+    return avarage;
+}
 
 
 
@@ -66,4 +76,33 @@ function averageNumbers() {}
 // Iteration 5 | Find Elements
 const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
 
-function doesWordExist() {}
+function doesWordExist(words2, wordToCheck) {
+    if ( words2.length === 0) {
+        return null;
+    } 
+    for (let i = 0; i < words2.length; i++) {
+        if (words2[i] === wordToCheck) {
+            return true;
+        }  
+    }
+    return false;
+
+}
+
+
+/* 
+
+function doesWordExist(words2) {
+    if ( words2.length === 0) {
+        return null;
+    } 
+    for ( let i = 0; i < words2.length; i++) {
+        let wordExists = words2[i];
+        if ( wordExists = words2[i]) {
+            return true;
+        } 
+    }
+    return false;
+
+}
+*/
